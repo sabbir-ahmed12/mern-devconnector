@@ -3,6 +3,7 @@ const express = require("express");
 const connectDB = require("./config/dbConn");
 const bodyParser = require("body-parser");
 const passport = require("passport");
+const profileController = require("./controllers/profileController");
 
 // Creating app
 const app = express();
@@ -26,6 +27,10 @@ app.use("/auth", require("./routes/auth"));
 
 // APIs
 app.use("/posts", require("./routes/api/posts"));
+// Public profile
+app.use("/handle/:handle", profileController.getUserProfileByHandle);
+app.use("/user/:user_id", profileController.getUserProfileById);
+app.use("/profiles/all", profileController.getAllProfiles);
 app.use(
   "/profile",
   passport.authenticate("jwt", { session: false }),
