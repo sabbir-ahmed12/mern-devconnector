@@ -35,7 +35,7 @@ const handleNewUser = async (req, res) => {
       {
         s: "200",
         r: "pg",
-        d: "mm",
+        d: "mp",
       },
       false
     );
