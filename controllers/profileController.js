@@ -163,7 +163,7 @@ const addExperience = async (req, res) => {
   // Add to experience array
   profile.experience.unshift(newExp);
   const result = profile.save();
-  return res.json(profile);
+  return res.json(result);
 };
 
 const addEducation = async (req, res) => {

@@ -50,7 +50,6 @@ const handleNewUser = async (req, res) => {
       avatar: avatar,
       password: hashedPwd,
     });
-    console.log(result);
     res.status(201).json({ success: `New account ${name} created.` });
   } catch (err) {
     res.status(500).json({ message: err.message });
