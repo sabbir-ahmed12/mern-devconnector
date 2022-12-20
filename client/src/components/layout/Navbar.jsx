@@ -1,10 +1,11 @@
+import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand-lg bg-light py-3">
+    <nav className="navbar navbar-expand-lg bg-light py-3 shadow-sm">
       <div className="container">
-        <a className="navbar-brand" href="#">
+        <Link className="navbar-brand" to="/">
           DevConnector
-        </a>
+        </Link>
         <button
           className="navbar-toggler"
           type="button"
@@ -18,17 +19,17 @@ const Navbar = () => {
         </button>
         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div className="navbar-nav me-auto">
-            <a className="nav-link" href="#">
+            <Link className="nav-link" to="/profiles">
               Developers
-            </a>
+            </Link>
           </div>
           <div className="navbar-nav ms-auto">
-            <a className="nav-link" href="#">
+            <Link className="nav-link" to="/register">
               Sign Up
-            </a>
-            <a className="nav-link" href="#">
+            </Link>
+            <Link className="nav-link" to="/login">
               Login
-            </a>
+            </Link>
           </div>
         </div>
       </div>

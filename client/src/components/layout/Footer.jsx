@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer class="bg-light py-5 text-center">
+    <footer className="bg-light mt-2 py-4 text-center">
       Copyright &copy; {new Date().getFullYear()} DevConnector
     </footer>
   );

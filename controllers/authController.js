@@ -14,7 +14,7 @@ const validateLoginForm = (reqBody) => {
 const handleUserLogin = async (req, res) => {
   const { error } = validateLoginForm(req.body);
 
-  if (error) return res.status(400).send(error.details[0].message);
+  if (error) return res.status(400).json(error);
 
   const { email, password } = req.body;
 
